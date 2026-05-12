@@ -1,0 +1,102 @@
+/* components/PopularCategories/PopularCategories.module.css */
+
+.section {
+  width: 100%;
+  padding: 80px 0;
+  background: #f8f9fb;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 600;
+  color: #003f88;
+  margin-bottom: 55px;
+  letter-spacing: -1px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ececec;
+  border-radius: 18px;
+  padding: 28px 20px;
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  min-height: 150px;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.iconBox {
+  width: 58px;
+  height: 58px;
+
+  background: #eef3f8;
+
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 22px;
+}
+
+.icon {
+  color: #003f88;
+}
+
+.categoryName {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1c1c1c;
+  margin-bottom: 8px;
+}
+
+.products {
+  font-size: 14px;
+  color: #777;
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    padding: 22px 18px;
+  }
+}
